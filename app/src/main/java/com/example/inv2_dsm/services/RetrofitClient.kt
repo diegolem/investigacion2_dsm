@@ -19,9 +19,8 @@ object RetrofitClient {
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
-            if (BuildConfig.DEBUG) {
-                httpClient.interceptors().add(logging)
-            }
+            // if(BuildConfig.DEBUG) httpClient.interceptors().add(logging) 
+            
             return httpClient.build()
         }
 
